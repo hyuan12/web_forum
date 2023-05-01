@@ -12,7 +12,11 @@ We spent about 30 hours in total
 
 ### a description of how you tested your code
 
+1) Create a post, read the post, delete the post
 
+2) Create a user, create a post with this user, delete a post with a user key, search for a post by id, search for a post by text, find a post by time
+
+3) Create admin account Create post Delete post via admin key
 
 ### any bugs or issues you could not resolve
 
@@ -20,7 +24,7 @@ The code uses a global lock (glock) to synchronize access to the database. While
 
 ### an example of a difficult issue or bug and how you resolved
 
-
+We didn't know to properly handle errors and exceptions in Flask when just started learning. We define a custom exception class UserNotFoundException that we raise if the user does not exist in the database. We then catch this exception in the except block and return a custom error message to the user with a 404 status code. If there is a database error, we catch the SQLAlchemyError exception and log the error before returning a generic error message to the user with a 500 status code.
 
 ### a list of the four extensions you’ve chosen to implement
 
@@ -54,8 +58,11 @@ return:
 ② Date- and time-based range queries
 
 Visit /search_ts/<int:st>/<int:et> to query posts by time range, st is the start timestamp, et is the end timestamp
+
 example:
+
 http://127.0.0.1:5000/search_ts/0/9999999999
+
 return:
 
 ```
@@ -81,8 +88,11 @@ return:
 ③ Fulltext search
 
 Visit /search_msg/\<msg\> for full-text search, msg is the keyword to be searched
+
 example:
+
 http://127.0.0.1:5000/search_msg/h
+
 return:
 
 ```
@@ -137,13 +147,16 @@ return:
 Persist data through python's built-in shelve library
 
 
-### detailed summaries of your tests for each of your extensions, i.e., how to interpret your testing framework and the tests you’ve written
+### detailed summaries of your tests for each of your extensions
 
 test 1
+
 Create a post by visiting /post, then visit /post/int:id to view the created post, and delete this post through /post/<int:id>/\<key\> after viewing
 
 test 2
+
 Create a user through /user, then use the user's key to create a post, use the user's key to delete the post, and access /search/\<int:id\> to find the specified user's post, and access /search_msg/ \<msg\> to search by text, use /search_ts/<int:st>/<int:et> to search by time
 
 test 3
+
 Creating a user is to add a key field to create an administrator account, create a post, and delete this post through the key of the administrator account
