@@ -8,7 +8,7 @@ https://github.com/hyuan12/web_forum
 
 ### hours we spent on the project
 
-We spent about 30 hours in total
+We spent about 40 hours in total
 
 ### a description of how you tested your code
 
