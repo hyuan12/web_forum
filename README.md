@@ -29,7 +29,7 @@ The code uses a global lock (glock) to synchronize access to the database. While
 To create a user by accessing the /user interface through a post request, a username needs to be passed in
 example:
 
-```json
+```
 {
 	"username":"jack"
 }
@@ -37,7 +37,7 @@ example:
 
 return:
 
-```json
+```
 {
 
     "id": 1,
@@ -58,7 +58,7 @@ example:
 http://127.0.0.1:5000/search_ts/0/9999999999
 return:
 
-```json
+```
 {
 
     "posts": [
@@ -85,7 +85,7 @@ example:
 http://127.0.0.1:5000/search_msg/h
 return:
 
-```json
+```
 {
 
     "posts": [
@@ -109,7 +109,7 @@ return:
 
 Create an administrator role by accessing /user through a post request. The difference from creating an ordinary user is that creating an administrator account needs to pass in a built-in key to create it. The key returned by the administrator is 80 bits, while that of an ordinary user is 76 bits. , used to distinguish between administrators and ordinary users
 
-```json
+```
 {
     "username":"admin",
     "key":"admin"
@@ -118,7 +118,7 @@ Create an administrator role by accessing /user through a post request. The diff
 
 return:
 
-```json
+```
 {
 
     "id": 1,
