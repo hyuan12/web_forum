@@ -24,7 +24,7 @@ The code uses a global lock (glock) to synchronize access to the database. While
 
 ### a list of the four extensions you’ve chosen to implement
 
-# ① Users and user keys
+# Users and user keys
 
 To create a user by accessing the /user interface through a post request, a username needs to be passed in
 example:
