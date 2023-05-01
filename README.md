@@ -24,7 +24,7 @@ The code uses a global lock (glock) to synchronize access to the database. While
 
 ### a list of the four extensions you’ve chosen to implement
 
-# Users and user keys
+① Users and user keys
 
 To create a user by accessing the /user interface through a post request, a username needs to be passed in
 example:
@@ -51,7 +51,7 @@ return:
 }
 ```
 
-# ② Date- and time-based range queries
+② Date- and time-based range queries
 
 Visit /search_ts/<int:st>/<int:et> to query posts by time range, st is the start timestamp, et is the end timestamp
 example:
@@ -78,7 +78,7 @@ return:
 }
 ```
 
-# ③ Fulltext search
+③ Fulltext search
 
 Visit /search_msg/\<msg\> for full-text search, msg is the keyword to be searched
 example:
@@ -105,7 +105,7 @@ return:
 }
 ```
 
-# ④ Moderator role
+④ Moderator role
 
 Create an administrator role by accessing /user through a post request. The difference from creating an ordinary user is that creating an administrator account needs to pass in a built-in key to create it. The key returned by the administrator is 80 bits, while that of an ordinary user is 76 bits. , used to distinguish between administrators and ordinary users
 
@@ -132,7 +132,7 @@ return:
 }
 ```
 
-# ⑤ Persistence
+⑤ Persistence
 
 Persist data through python's built-in shelve library
 
