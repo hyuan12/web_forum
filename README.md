@@ -1,6 +1,10 @@
 ### Group:
 
-Wenkai Xiao wxiao7@stevens.edu    Hai Yuan hyuan12@stevens.edu    Thrinath Reddy Adaboina tadaboin@stevens.edu
+Wenkai Xiao wxiao7@stevens.edu    
+
+Hai Yuan hyuan12@stevens.edu    
+
+Thrinath Reddy Adaboina tadaboin@stevens.edu
 
 ### GitHub repo:
 
